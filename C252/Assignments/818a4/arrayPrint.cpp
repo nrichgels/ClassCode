@@ -1,0 +1,24 @@
+
+// This function outputs on screen what is in each individual "slot" of an array,
+// in a list-like manner.
+
+#include <fstream>
+using namespace std;
+
+void arrayPrint(ofstream& outfile, int Array[], int filledIndex)
+{
+   
+   // Place a line of tildes(~) to signal the start of the Array.
+   outfile << "~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+
+   // Make a loop that is done executing once i has taken the place of every value in the given array.
+   for (int i=0; i<=filledIndex; i++)
+      // For every value of i, report the value of the array at spot i in the array.
+     {outfile << "Array[" << i << "]-->" << Array[i] << endl;};
+
+   // Place a line of tildes(~) to signal that the output beyond this point is not
+   // a continous part of the array.
+   outfile << "~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+}
+
+

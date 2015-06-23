@@ -1,0 +1,11 @@
+#ifndef __omgimextrastupid_h__
+#define __omgimextrastupid_h__
+#include <iostream>
+#include "omgimstupid.h"
+using namespace std;
+
+class omgImExtraStupid : public omgImSoStupid
+{
+public:
+   int a;
+}; // End omgImExtraStupid

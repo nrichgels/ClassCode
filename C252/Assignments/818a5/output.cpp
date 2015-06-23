@@ -1,0 +1,50 @@
+// Author: Nathan Richgels
+// File: main.cpp
+// Date: 2/23/2012
+// Class: CSIS252
+// Assignment 5
+
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+#include "structs.h"
+
+
+void outputData(const EmployeeData employees[], int count, SummaryData Totals)
+{
+   // Open/create the file which everything will be entered into.
+   ofstream outfile;
+   outfile.open("payroll");
+
+   // Assures two places after the decimal point in every float.
+   outfile << fixed << showpoint << setprecision(2);
+
+   // Create a table that right-aligns.
+   outfile << "Employee Summary Totals" << endl;
+   outfile << "_______________________" << endl;
+   outfile << "Total Gross Pay:" << setw(24) << Totals.Gross << endl;
+   outfile << "Total Federal Witholding:" << setw(15) << Totals.FedTax
+   << endl;
+   outfile << "Total Social Security Witheld:" <<  setw(10) << Totals.SocSec
+   << endl;
+   outfile << "Total Net Pay:" << setw(26) << Totals.netPay << endl << endl ;
+
+   // Make the header and underlines of the table.
+   outfile  << left << setw(6) << "ID" << setw(22) << "name" << setw(8) 
+   << "hours" << setw(7) << "wage" <<  setw(8) <<"gross" << setw(8) << "fed"
+   << setw(8) << "SS" << setw(8) << "net" << endl;
+
+   outfile << left << setw(6) << "___" << setw(22) << "____________________"
+   << setw(8) << "_____" << setw(7) << "____" << setw(8) << "_____"  
+   << setw(8) << "___" <<  setw(8) << "__" << setw(8) << "___" << endl;
+
+   // For every employee, left-align all of their information.
+   for(int i=0; i<count; i++)
+     {outfile << left << setw(6) << employees[i].Eid << setw(22)
+     << employees[i].name <<setw(8)<< employees[i].hours << setw(7)
+     << employees[i].wage << setw(8) << employees[i].gross << setw(8)
+     << employees[i].FedTax << setw(8) << employees[i].SocSec << setw(8)
+     << employees[i].netpay << endl;};
+}

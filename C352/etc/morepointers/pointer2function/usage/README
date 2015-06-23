@@ -1,0 +1,19 @@
+Let's say we are writing a program for a group of people (for example
+employees, students, or whatever).  Each person is one of four different
+types that has an associated function to be executed for a person of that
+type.  What this example shows is a class member being a pointer to a
+function, that points to 1 of the 4 utility functions associated with
+that person type.
+
+for example:
+   Person p1("John Doe",3);
+   Person p2("Jane Doe",2);
+   p1.UtilityFunction();
+   p2.UtilityFunction();
+
+Since John Doe is of type 3, utility function 3 will execute because
+object x's member UtilityFunction points to function 3.
+
+Since Jane Doe is of type 2, utility function 2 will execute because
+object y's member UtilityFunction points to function 2.
+

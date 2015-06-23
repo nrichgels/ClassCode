@@ -1,0 +1,58 @@
+There are 3 main parts to exception handling, try, catch and throw.
+
+* an exception must be thrown in a try block and caught by a catch block
+* the try block is followed by one or more catch blocks
+* catch (...) catches exceptions of all types and must be the last catch
+* the catch block must immediately follow the try block
+* additional code between catch blocks is not allowed
+* if no exception is thrown, all catch blocks are ignored
+* execution resumes after the last catch block
+* when an exception is thrown, control is immediately passed to a catch block
+* when an exception is thrown, the remainder of the try block is ignored
+* any data type can be thrown including exception classes
+* once a catch block executes, the remaining catch blocks are ignored
+* when an exception is thrown, the function call stack is unwound
+* if a throw occurs that is not caught, the program will terminate
+* exceptions can be rethrown (ex13 & ex14) for partial exception processing
+* it is good programming practice for functions to identify which
+  exceptions they may throw
+
+C++ exception class hierarchy (you will not be tested on memorizing these)
+
+exception
+     logic_error
+          domain_error
+          invalid_argument
+          length_error
+          out_of_range
+     runtime_error
+          overflow_error
+          range_error
+          underflow_error
+     bad_alloc
+     bad_cast
+     bad_exeception
+     bad_typeid
+     failure
+     bad_function_call
+     bad_weak_ptr
+
+FILE INDEX
+file      purpose
+--------  ----------------------------------------------------------------
+ex1.cpp   simple try/catch/throw, string exception
+ex2.cpp   multiple catch blocks, depends on data type thrown, demo catch ...
+ex3.cpp   string exception thrown in function, caught by calling function
+ex4.cpp   throws runtime_error exception, demonstrates what() method
+ex5.cpp   throws range_error exception, demonstrates what() method
+ex6.cpp   catches out_of_range exception thrown by string class substr method
+ex7.cpp   throws length_error exception or string may throw out_of_range
+ex8.cpp   catch bad_alloc exception, dynamic memory allocation
+ex9.cpp   throws range_error or overflow_error.  what if no catch block?
+ex10.cpp  user defined exception class, no constructor
+ex11.cpp  user defined exception class, constructor takes string argument
+ex12.cpp  demonstrates standard exception hierarchy
+ex13.cpp  example of rethrowing an exception, same exception
+ex14.cpp  example of rethrowing an exception, different exception
+ex15.cpp  example of stack unwinding of exceptions
+

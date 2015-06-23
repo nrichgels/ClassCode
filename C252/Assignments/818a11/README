@@ -1,0 +1,71 @@
+Author: Nathan Richgels
+Program: Prog9
+
+The program, Prog11, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Type in "prog11", followed by an inputfile, followed by
+the file that you want the output written out to.
+
+
+INTRODUCTION
+~~~~~~~~~~~~
+Prog11 is a program intended to read a phrase from a file and output
+whether or not it's a palindrome.
+
+I/O
+~~~
+Regarding Input:
+A textfile of the user's choice.  The user should include an argument in the
+command line with a textfile that has at least one phrase ending with a '.'.
+The last two characters of the file should be a '.' followed by a '\n'.
+
+Regarding Output:
+All output is written to the third argument of the command line.  It will
+be every phrase, followed by whether or not that phrase or word is a 
+palindrome.
+
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+Prog11 relies on six files to exist:
+File                           function                  description
+___________________       ___________________          _________________
+functions.cpp             function implementation      Provides functons
+                                                           for main
+
+prototypes.h               function defenition         Provides function
+                                                              headers.
+
+stackType.h             template class stackType     Provides defenition and
+                                                      implementation for the
+                                                         stackType class
+
+queueType.h             template class queueType     Provides defenition and
+                                                      implementation for the
+                                                         queuetype class
+
+constants.h                  constants              Holds used in the program
+
+main.cpp                       main                 Tests the class via output
+
+This directly also has two files for conveinience:
+File                             description
+___________________________      ________________________________________
+makefile                         compiles all files into a usable program
+README                           provides program information (this file)
+
+
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+Please note that this program has been tested assuming that all input 
+has been given with the proper format. For more information on the 
+input's proper format, please read the I/O section.
+
+>Tested 'uneven' capitals.
+>Tested 'uneven' spaces.
+>Tested ignorable punctuation.
+>Tested long strings.
+>Tested multiple palindromes.
+
+Known bugs:  While loop in main continues even though eof.

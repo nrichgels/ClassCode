@@ -1,0 +1,239 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <ctime>
+#include "date.h"
+
+using namespace std;
+
+/*********************************Functions***********************************
+ ****************************************************************************/
+namespace DateNameSpace
+{
+bool leapyear(int Year)
+{
+      if((Year/100)*100==Year)
+      {
+         if((Year/400)*400==(Year))
+            {return 1;}
+         else
+            {return 0;}
+         
+      }//End if((Year/100)*100==Year)
+   else
+   {
+       if(Year/4==(Year+3)/4)
+          return 1;
+       else
+          return 0;
+   }//end else
+}//End leapyear
+
+int centuryLeapYear(int Year)
+{
+   if((Year/100)*100==Year)
+      {if((Year/400)*400==(Year))
+         {return 1;}
+       else
+        {return 0;}}
+   else
+     {return 2;}
+}//End function centuryLeapYear
+
+bool validDay(int Month, int Day, int Year) throw (DateException)
+{
+   if(Month==4 || Month==6 || Month==9 || Month==11)
+   {
+      if (Day>=1 && Day<=30)
+         return 1;
+      else
+         throw DateException( "exception: Date is not within the given month's range of days." );
+   }
+
+   if(Month==1 || Month==3 || Month==5 || Month==7 || Month==8
+                                     || Month==10 || Month==12)
+   {
+      if (Day>=1 && Day<=31)
+         return 1;
+      else
+         throw DateException( "exception: Date is not within the given month's range of days." );
+   }
+
+   if(Month==2)
+   {
+       if(centuryLeapYear(Year)==1)
+       {
+          if (Day>=1 && Day<=29)
+             return 1;
+        
+          else
+             throw DateException( "exception: Date is not within the given month's range of days." );
+       }//end if(centuryLeapYear(Year)==1)   
+
+       if(centuryLeapYear(Year)==0)
+       {
+          if(Day>=1 && Day<=28);
+             return 1;
+          else
+             throw DateException( "exception: Date is not within the given month's range of days." );
+       }//End if(centuryLeapYear==0
+        
+       if(centuryLeapYear(Year)==2)
+       {
+          if(Year/4==(Year+3)/4)
+          {
+             if(Day>=1 && Day<=29)
+                return 1;
+             else
+                throw DateException( "exception: Date is not within the given month's range of days." );
+          }//End if(Year/4==(Year+3)/4)
+          else 
+          {
+             if(Day>=1 && Day<=28)
+                return 1;
+             else
+                throw DateException( "exception: Date is not within the given month's range of days." );
+          }//End else
+       };//End if(centuryLeapYear(Year==2))
+   }//End if(Month==2)
+
+   else
+      throw DateException( "exception: A valid month has not been given." );
+}//End function validDay
+
+
+
+/*********************************DateException*******************************
+ *********************************Class Methods*******************************/
+DateException::DateException(const string& m)
+{
+   m = msg;
+}
+
+string DateException::what()
+{
+   return msg;
+}
+
+/*************************************Date************************************
+ *********************************Static Members******************************/
+Date::currentFormat = NUMERIC;
+
+
+
+/*************************************Date************************************
+ *********************************Class Methods*******************************/
+Date::Date(const int& inMonth, const int& inDay, const int& inYear)
+{
+   if(validDay(inMonth, inDay, inYear)
+   {
+      month = inMonth;
+      day = inDay;
+      year = inYear;
+   } //End validDay
+}//End Constructor
+   
+Date::Date()
+{
+   tm *current;
+   time_t lt;
+   lt = time('\0');
+   current = localtime(&lt);
+   year = current->tm_year + 1900;
+   month = current->tm_mon+1;
+   day = current->tm_mday;
+}//End Constructor
+
+void Date::setDate(const int& inMonth, const int& inDay, const int& inYear)
+{
+   if(validDay(inMonth, inDay, inYear)
+   {
+      month = inMonth;
+      day = inDay;
+      year = inYear;
+   }// End validDay
+}//End setDate
+
+void Date::outputFormat(const formatType type)
+{
+   currentFormat = type;
+
+}//End outputFormat
+
+string Date::getDayOfWeek()
+{
+   int dayOfWeek;
+   int months;
+   int centuries;
+   centuries = (3-year/100%4)*2;
+   switch (month)
+   {
+      case 1  : if (leapyear(year))
+                   months = 6;
+                else
+                   months = 0; break;
+      case 2  : if (leapyear(year))
+                   months = 2;
+                else
+                   months = 3; break;
+      case 3  : months = 3; break;
+      case 4  : months = 6; break;
+      case 5  : months = 1; break;
+      case 6  : months = 4; break;
+      case 7  : months = 6; break;
+      case 8  : months = 2; break;
+      case 9  : months = 5; break;
+      case 10 : months = 0; break;
+      case 11 : months = 3; break;
+      case 12 : months = 5; break;
+   }
+   dayofweek = (centuries+year%100+year%100/4+months+day)%7;
+
+   switch (dayofweek)
+   {
+      case 0 : return( "Sunday" );
+      case 1 : return( "Monday" );
+      case 2 : return( "Tuesday" );
+      case 3 : return( "Wednesday" );
+      case 4 : return( "Thursday" );
+      case 5 : return( "Friday" );
+      case 6 : return( "Saturday" );
+   }
+}//End getDayOfWeek
+
+string Date::getMonth()
+{
+   switch (month)
+   {
+      case 1 : return( "January" );
+      case 2 : return( "February" );
+      case 3 : return( "March" );
+      case 4 : return( "April" );
+      case 5 : return( "May" );
+      case 6 : return( "June" );
+      case 7 : return( "July" );
+      case 8 : return( "August" );
+      case 9 : return( "September" );
+      case 10 : return( "October" );
+      case 11 : return( "November" );
+      case 12 : return( "December" );
+   }//End switch
+}//End getMonth
+
+ostream& operator<<(ostream& out, const Date obj)
+{
+   if( Date::currentFormat == NUMERIC )
+      out << obj.month << '/' << obj.day << '/' << obj.year;
+   
+   if( Date::currentFormat == FULLNUMERIC )
+      out << obj.getDayOfWeek() << ", " << obj.month << '/' << obj.day << '/' <<obj.year;
+      
+   if( Date::currentFormat == TEXT )
+      out << obj.getMonth() << ' ' << obj.day << ", " << obj.year;
+   
+   if( Date::currentFormat == FULLTEXT )
+      out << obj.getDayOfWeek() << ", " << obj.getMonth() << ' ' << obj.day << ", " << obj.year;
+   
+}//End ostream overload for class Date
+
+}//End DateNameSpace

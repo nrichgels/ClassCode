@@ -1,0 +1,50 @@
+// File:
+// Name: Nathan Richgels
+// Class: CSIS 252
+// Program: Proves the author has a basic understanding of arrays and functions in C++.
+// Date: 1/31/2012
+
+
+// The purpose of this program is array processing and using functions.
+
+#include <iostream>
+using namespace std;
+const int ArrayLength=30;  //The length of the array.
+
+void Read(int array[], int places, int& count)
+// The function Read will return values will fill the memory inserts of the array.
+// It will also update count to equal one more than the number of indexes in the array.
+// Finally, by telling the function how many places there are in the array, it will  assure
+// that the array won't overload.
+{
+   int Sentinel;
+   cout << "Please enter up to " << places-count << " values to enter into an Array: ";
+   cin >> Sentinel;
+   while (Sentinel==-999)
+     {cout << endl << "No values entered into Array.\nPlease enter a valid value: ";
+      cin >> Sentinel;};
+   while ((places-count)>0 && Sentinel!=-999)
+     {array[count]=Sentinel;
+      count++;
+      cout << "Please enter up to " << places-count << " more values or enter -999 to end: ";
+      cin >> Sentinel;
+      cout << endl;};
+
+   if (places-count==0)
+     {cout << "Ran out of space, array is now filled." << endl;};
+}
+
+void EvenOddSplit(int Array[], int places)
+{
+}
+
+int main()
+{
+   int contains[ArrayLength],
+       count=0;
+
+   Read(contains, ArrayLength, count);
+
+
+   return 0;
+}

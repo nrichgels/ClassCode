@@ -1,0 +1,98 @@
+Author: Nathan Richgels
+Program: Prog13
+
+The program, prog13, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Type "prog13", followed by an input file, and a designated output file
+into the command line to run the program correctly.
+
+
+INTRODUCTION
+~~~~~~~~~~~~
+prog13 is a program intended to test a Sorted List class and a Student class.
+The sortedList is an ADT intended to sort a list of objects by their value.
+The Student class shows an understanding of class inheritance, as it is-a
+person with a Dragon ID.  A 'student' is considered larger than another
+'student' if their dragon ID is larger.
+
+
+I/O
+~~~
+Regarding Input:
+In a file, there should be a Name of a student, followed by a comma, and eight
+numbers following directly after the comma (no space). Additional entries
+should be seperated by New Lines. (Use the [Enter] key)
+
+Ex:
+Nathan Richgels,10983537
+Rebecca Black,00000000
+Robin Williams,99999999
+Sarah Connors,87430219
+
+Regarding Output:
+Output will be put into a file that is entered into the third argument of
+the command line.  The output will have all of the names and dragon IDs in
+columns from smalles ID to largest.
+
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+prog12 relies on twelve files to exist:
+File                           function                  description
+___________________       ___________________          _________________
+date.cpp                     class date             Provides implementation 
+                                                   for a date class (which the
+                                                     student class relies on)
+
+date.h                       class date             Provides Implementation
+                                                      for the date class
+
+linkedList.h          class template linkedListType    Implementation &
+                                                     defenition for linkedList
+
+linkedList2.h         class template linkedList2Type   Implementation &
+                                                    defenition for linkedList2
+
+sortedList.h         class template sortedListType     Implementation &
+                                                    defenition for sortedList
+
+functions.cpp           ReadInput & WriteOutput      Functions to read a file
+                                                     and output to a file for
+                                                     a linked List of students
+
+prototypes.h           ReadInput & WriteOutput       Provides prototypes for
+                             Prototypes               prog12's functions.
+
+person.cpp                   class Person          Provides implementation for
+                                                        a Person class
+
+person.h                     class Person          Provides defenition for a
+                                                          Person class
+
+student.h                    class Student           Provides defenition for
+                                                        a Student class
+
+student.cpp                  class Student           Provides implementation
+                                                      for a Student class
+
+main.cpp                       main                    Uses all classes
+                                                         & functions
+
+This directly also has two files for conveinience:
+File                             description
+___________________________      ________________________________________
+makefile                         compiles all files into a usable program
+README                           provides program information (this file)
+
+
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+Please note that this program has been tested assuming that all input 
+has been given with the proper format. For more information on the 
+input's proper format, please read the I/O section.
+
+>Tested unordered entries of an input file.
+
+Though no bugs were found, I still have a full can of bugspray.
+So if you find one, contact me at richgelsna@mnstate.edu.

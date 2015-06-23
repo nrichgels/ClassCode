@@ -1,0 +1,45 @@
+// Author: Nathan Richgels
+// File: employee.h
+// Date: 3/72012
+// Class: CSIS252
+// Assignment 7
+
+#ifndef _EMPLOYEE_H_
+#define _EMPLOYEE_H_
+
+
+class Employee
+{
+   public:
+      Employee(int=0, string="0", double=0, double=0);
+      void setID(int);
+      int ID();
+      void setName(string);
+      string Name();
+      void setWage(double);
+      double Wage();
+      void setHours(double);
+      double Hours();
+      double Gross();
+      double Fedtax();
+      double Socsec();
+      double Net();
+      bool operator==(const Employee& other) const;
+      bool operator>=(const Employee& other) const;
+      bool operator>(const Employee& other) const;
+      bool operator<=(const Employee& other) const;
+      bool operator<(const Employee& other) const;
+      bool operator!=(const Employee& other) const;
+
+   private:
+      int EID;
+      string name;
+      double hours;
+      double wage;
+      double gross;
+      double fedtax;
+      double socsec;
+      double net;
+};
+
+#endif

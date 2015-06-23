@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+#include "date.h"
+
+int main()
+{
+   Date Example1, Example2;
+   if(Example1>Example2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+   return 0;
+}

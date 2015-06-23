@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+
+class omgImSoStupid
+{
+public:
+   int n;
+};//End omgImSoStupid

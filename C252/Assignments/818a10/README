@@ -1,0 +1,60 @@
+Author: Nathan Richgels
+Program: Prog9
+
+The program, Prog10, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Simply type in "prog10" into the command line to run the program
+correctly.
+
+
+INTRODUCTION
+~~~~~~~~~~~~
+Prog 10 is a program intended to test the converter class.
+
+I/O
+~~~
+Regarding Input:
+There is no input for the program.
+
+Regarding Output:
+The output that is displayed will be testing the two methods of the converter
+class.
+
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+Prog10 relies on four files to exist:
+File                           function                  description
+___________________       ___________________          _________________
+converter.cpp             class converter         Provides defenition for the
+                                                        converter class
+
+converter.h               class converter         Provides implementation for
+                                                     the converter class
+
+stackType.h            template class stackType     Provides defenition and
+                                                     implementation for the
+                                                       the stackType class
+
+main.cpp                       main                 Tests the class via output
+
+This directly also has two files for conveinience:
+File                             description
+___________________________      ________________________________________
+makefile                         compiles all files into a usable program
+README                           provides program information (this file)
+
+
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+Please note that this program has been tested assuming that all input 
+has been given with the proper format. For more information on the 
+input's proper format, please read the I/O section.
+
+>Tested the converter class's ability to change into other bases.
+>Tested the converter class's ability to change negative integers.
+>Tested the converter class's ability to 'change' a base into the same base.
+
+Though no bugs were found, I still have a full can of bugspray.
+So if you find one, contact me at richgelsna@mnstate.edu.

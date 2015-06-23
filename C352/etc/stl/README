@@ -1,0 +1,79 @@
+This directory contains examples using the Standard Template Library (STL).
+
+Componenets of the STL include:
+   1) containers - store data
+   2) iterators - allow stepping through the data in a container
+   3) algorithms - manipulate data
+
+Containers - there are three categories of containers
+   1) sequence containers (sequential containers)
+         * vector
+         * list
+         * deque (double ended queue)
+   2) container adapters
+         * stack
+         * queue
+         * priority_queue (maintained in greatest order)
+   3) associative containers
+         * set
+         * multiset (allow duplicate items)
+         * map (key/value pairs)
+         * multimap (allow duplicate keys)
+         * bitset (set of bits)
+
+Iterators - similar to pointers, they allow accessing the elements in 
+   containers.  Two common operations on iterators are * and ++ which
+   function just like their pointer counterparts.  Iterators can be
+   used with sequence containers and associative containers, but not
+   container adapters (this makes sense considering the containers in
+   the container adapters category, i.e. we would not want to iterate
+   through a stack, but rather push and pop).  There are five basic
+   types of iterators.
+   1) input iterator (istream_iterator) - returns element by element from
+      the input stream
+   2) output iterator (ostream_iterator) - adds element by element to the
+      output stream
+   3) forward iterator - access elements one by one in the forward 
+      direction only
+   4) bidirectional iterator - access elements one by one in either
+      direction
+   5) random access iterator - access elements in any order
+   The type of iterator available depends on the container.
+      * random access - vector, deque
+      * bidirectional - list, map, multimap, set, multiset, bitset
+
+Algorithms - there are 4 categories of algorithms
+   1) nonmodifying - include among many others, binary_search and search
+   2) modifying - include among many others, copy, merge, set_difference,
+         set_intersection, set_union, and sort
+   3) numeric - accumulate, adjacent_difference, inner_product, and 
+         partial_sum
+   4) heap - make_heap, pop_heap, push_heap, and sort_heap
+
+
+Simple example of a container (list) and an iterator
+
+list<int> myList;
+list<int>::iterator curr;
+
+// right now, the list is empty;
+// start the iterator at the beginning of myList
+curr = myList.begin();
+// test for empty list
+if (curr == myList.end()) // or myList.empty()
+   cout << "The list is empty" << endl;
+
+// insert five items into the list myList
+for (int j = 0; j < 5; j++)
+   // places item j at the front of the list
+   // insert returns an iterator to the item just inserted
+   curr = myList.insert(curr, j);
+
+// now output each item in the list starting with the
+// first item in the list; keep moving the iterator
+// to the next item in the list until the end of
+// the list is reached
+for (curr = myList.begin(); curr != myList.end(); curr++)
+   cout << *curr << " ";
+cout << endl;
+

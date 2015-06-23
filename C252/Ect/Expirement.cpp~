@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+   if(!(4>3))
+      cout << "True!" << endl;
+   else
+      cout << "False!" << endl;
+   return 0;
+}

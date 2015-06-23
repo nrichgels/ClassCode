@@ -1,0 +1,106 @@
+Author: Nathan Richgels
+Program: Prog5
+
+This program has been written in the c++ programming language. To construct
+the program type in "make" into the command line. Assuming user prerequisites
+are met, simply type in "prog5" into the command line to run the program.
+
+INTRODUCTION
+~~~~~~~~~~~~
+Prog5 is a program intended to calculate information on up to 100 employees.
+It will report (in a file called "payroll") the total payroll, total federal
+tax witheld, total Social Security witheld, total net pay.  It will also 
+report the individual four-digit ID's for each employee, their names, how many
+hours they've worked in this pay period, how much they get paid per hour,
+their gross pay, their Fed tax witheld, their social security witheld,
+and their toal netpay.
+
+*Note: This program assumes that if an employee works greater than 40 hours,
+the employee will be paid time and a half (1.5x) for every hour more than 40.
+
+*Note: This program assumes that the Fed Tax rate is 30% & the Social Security
+tax rate is 8%.
+
+I/O
+~~~
+Regarding Input:
+The user should put all input into a file named "data" (no extensions).
+In this order, the user should enter Employee ID, name, hours, & wage.
+Each bit of employee information should be seperated by a single newline in
+the file (enter key is pressed after each statistic.)
+To move onto the next employee, also seperate the next piece of info with a
+SINGLE newline.
+
+ID1
+name1
+hours1
+wage1
+ID2
+name2
+hours2
+wage2
+
+Ex:
+8888
+Nathan Richgels
+15
+7.25
+9430
+BobDoe
+ect...
+
+For the program to work properly, make sure EVERY piece of information is entered.
+(The number of lines in the file should be able to be evenly divided by 4.)
+
+Regarding Output:
+After you run the program with valid input in file "data",
+the file "payroll" is produced, which can be seen via any text-editor.
+The output will be put into two simple table-like structures, the first of
+which will tell you the total gross pay, total federal witholding, total
+social security witholding, and total net pay for all entered employees.
+The second table will tell you the ID, name, hours, hourly wage, gross pay,
+federal tax witholding, social security witholding, and net pay of each
+employee given to the program.
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+This program relies on seven files to exist:
+
+File                   function                description
+____________________   _____________________   _______________________________
+main.cpp               main                    main function
+read.cpp               read                    interprets a file
+Summary.cpp            Summary                 calculates totals
+output.cpp             outputData              outputs results to "payroll"
+constants.h            declaration             declares constants
+structs.h              declaration             creates 2 datatypes
+prototypes.h           declaration             prototypes for functions
+
+
+The directory also has two miscellaneous files for user convienience:
+File                            description
+____________________            ______________________________________________
+makefile                        compiles all files into usable program
+README                          provides program information (this file)
+
+
+The program will calculate and store information into an array of structs.
+Using this information, a function will calculate and store information into
+and additional struct, which holds the totals.
+
+Algorithm Overview:
+Interpret and Store all employee information.
+Calculate and store additional information elsewhere.
+Format and put into file all known information..
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+Please note that this program has been tested assuming that all input
+has been given with the proper format.  For more information on the
+input's proper format, please read the I/O section.
+
+>Checked boundary area at 39 hours, 40 hours, and 41 hours.
+>Made sure every statistic was calculated correctly.
+
+Though no known bugs were found, I still have a full can of bugspray.
+So if you find one, contact me at "richgelsna@mnstate.edu".

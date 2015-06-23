@@ -1,0 +1,11 @@
+This directory contains two directories showing examples of
+pointers to functions.
+
+syntax
+     Has 5 example programs.  It shows pointers to functions and also
+     passing pointers to functions as arguments to other functions.
+
+usage
+     Shows an example of a class member being a pointer to a function.
+     See the README file in the usage directory for more detail.
+

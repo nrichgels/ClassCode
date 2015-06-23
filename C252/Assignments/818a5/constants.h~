@@ -1,0 +1,6 @@
+#ifndef CONSTANTS_H_
+#define CONSTANTS_H_
+const double FED= 0.3;
+const double SS= 0.08;
+const int ARRAYMAX= 100;
+#endif

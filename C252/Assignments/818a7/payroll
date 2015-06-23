@@ -1,0 +1,13 @@
+Employee Summary Totals
+_______________________
+Total Gross Pay:                 1030.00
+Total Federal Witholding:         309.00
+Total Social Security Witheld:     82.40
+Total Net Pay:                    638.60
+
+ID    name                  hours   wage   gross   fed     SS      net     
+___   ____________________  _____   ____   _____   ___     __      ___     
+1234  Nathan Richgels       41.00   10.00  415.00  124.50  33.20   257.30  
+8888  Nathan Richgels       39.00   10.00  390.00  117.00  31.20   241.80  
+3030  Sup                   10.00   10.50  105.00  31.50   8.40    65.10   
+4040  Test4                 10.00   12.00  120.00  36.00   9.60    74.40   

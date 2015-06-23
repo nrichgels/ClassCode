@@ -1,0 +1,37 @@
+Author: Nathan Richgels
+Program: Prog1
+
+The Money class, and the program, Prog1, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Type in "prog1" to execute the program.
+
+INTRODUCTION
+~~~~~~~~~~~~
+The Money class is a class intended to assist in outputting
+in various formats.
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+This program relies on 3 files to exist:
+
+File                   function                description
+____________________   _____________________   _______________________________
+main.cpp               main                    main function
+money.cpp              Implementation          contains the money class
+money.h                Defenition              defenition of the money class
+
+The directory also has two miscellaneous files for user convienience:
+File                            description
+____________________            ______________________________________________
+makefile                        compiles all files into usable program
+README                          provides program information (this file)
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+>Checked negative number of all three outputs
+>Made sure everything lined up correctly
+
+Known bugs:
+Various formats for extra credit were started, but not finished.
+There is a private method to assist in extra credit formats,
+but there is a weird bug for it when you output values.

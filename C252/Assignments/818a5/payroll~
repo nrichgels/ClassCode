@@ -1,0 +1,11 @@
+Employee Summary Totals
+_______________________
+Total Gross Pay:                  800.00
+Total Federal Witholding:         240.00
+Total Social Security Witheld:     64.00
+Total Net Pay:                    496.00
+
+ID    name                  hours   wage   gross   fed     SS      net     
+___   ____________________  _____   ____   _____   ___     __      ___     
+9999  Nathan Richgels       20.00   20.00  400.00  120.00  32.00   248.00  
+8889  Lard Ass              20.00   20.00  400.00  120.00  32.00   248.00  

@@ -1,0 +1,141 @@
+// Author: Nathan Richgels
+// File: main.cpp
+// Date: 2/28/2012
+// Class: CSIS252
+// Assignment 6
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+#include "rectangle.h"
+
+
+int main()
+{
+   cout << "The purpose of this program is to test the Rectangle class.\n\n";
+
+   cout << "Testing that there are default values: Rectangle Object1():\n";
+   Rectangle Object1;
+   cout << "Object1.Width():" << Object1.Width() << "     Object1.Length()"
+   << Object1.Length() << endl << "Area: " << Object1 << "\n\n";
+
+   cout << "Testing that values can be given: Rectangle Object2(12, 14) \n";
+   Rectangle Object2(12, 14);
+   cout << "Object2.Length(): " << Object2.Length() << "     Object2.Width():"
+   << " " << Object2.Width() << endl << "Area: " << Object2 << endl << endl;
+
+   cout << "Calling length and Width has just been proven to work, as well as"
+   << "\ncalling the object directly.  Now, we have to test the mutators.\n\n";
+
+   cout << "Object1.setWidth(6) " << endl;
+   Object1.setWidth(6);
+   cout <<  "Object1.setLength(4) " << endl << endl;
+   Object1.setLength(4);
+
+   cout << "Object1.Length(): " << Object1.Length() << "     "
+   << "Object1.Width(): " << Object1.Width() << endl;
+   cout << "Object1.Area(): " << Object1.Area() << endl << endl;
+
+   cout << "Now we need to prove that boolean operators work.";
+   cout << "\n\nRectangle Area is being compared:\n";
+
+   cout << "Object1.Area(): " << Object1.Area() << "     Object2.Area(): "
+   << Object2.Area() << endl << endl;
+
+   cout << left << setw(18) << "Object1==Object2: "; 
+   if(Object1==Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1>Object2: ";
+   if(Object1>Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1>=Object2: ";
+   if(Object1>=Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1<Object2: ";
+   if(Object1<Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1<=Object2: ";
+   if(Object1<=Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << "Object1!=Object2: ";
+   if(Object1!=Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << "\nSince we're comparing area, I'll make the rectangles different"
+   << " dimmensions,\nbut same area to make sure they're considered equal:"
+   << endl;
+
+   cout << "Object1.setWidth(28)\n";
+   Object1.setWidth(28);
+   cout << "Object1.setLength(6)\n";
+   Object1.setLength(6);
+
+   cout << "Object1.Length(): " << Object1.Length();
+   Object1.Length();
+   cout << "     Object2.Length(): " << Object2.Length();
+
+   cout << "\nObject1.Width(): " << Object1.Width();
+   cout << "     Object2.Width():" << Object2.Width() << endl;
+
+   cout << "Object1.Area(): " << Object1.Area()
+   << "     Object2.Area(): " << Object2.Area() << endl << endl;
+
+   cout << left << setw(18) << "Object1==Object2: "; 
+   if(Object1==Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1>Object2: ";
+   if(Object1>Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1>=Object2: ";
+   if(Object1>=Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1<Object2: ";
+   if(Object1<Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1<=Object2: ";
+   if(Object1<=Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << left << setw(18) << "Object1!=Object2: ";
+   if(Object1!=Object2)
+   cout << "True" << endl;
+   else
+   cout << "False" << endl;
+
+   cout << "Finally, we should return the perimeter of the rectangles\nto "
+   << "prove the method call works." << endl;
+   cout << "Object1.Perimeter(): " << Object1.Perimeter()
+   << "     Object2.perimeter(): " << Object2.Perimeter() << endl;
+   return 0;
+}

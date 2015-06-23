@@ -1,0 +1,6 @@
+void arrayPrint(int Array[], int filledIndex);
+void Read(ofstream& ofile, int array[], int places, int& count);
+void average(int Array[], int filledIndex);
+void sort(int numbers[], int n);
+void EvenOddSplit(int Array[], int EvenArray[], int OddArray[], int filledIndex, int& EvenPlace, int& OddPlace);
+void median(int Array[], int filledIndex);

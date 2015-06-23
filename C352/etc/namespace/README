@@ -1,0 +1,50 @@
+* There are 3 types of namespaces
+  1) global - the default; names that don't belong to any other namespace
+  2) named - those such as std or those we create outselves
+  3) unnamed - declared in a namespace without a name; local to a
+               compilation unit
+* Unless otherwise specified, all names go in the global namespace and
+  the global namespace is used by default
+* When you use the compiler directive:
+     #include <iostream>
+  it places all its name definitions (like cin, cout, endl)
+  in the std namespace.  
+* There are 3 ways to access names in a namespace.
+  1) full names.  example - std::cout << "hello" << std::endl;
+  2) using declaration.  example - using std::cout;
+     only cout from the std namespace can be used directly
+  3) using directive. example - using namespace std;
+     all names in the std namespace can be used directly
+* For each name, the compiler will attempt to attach namespaces that are
+  being used to each name.  For example, when the compiler sees the name
+  cout, it will first check the global namespace, then it will attempt
+  std::cout (assuming using namespace std; or using std::cout; was issued) 
+  to resolve it.
+* Namespaces follow scope rules, i.e. a using declaration or directive
+  in a function (or block) is known only to that function (or block).
+* A using directive or declaration should be placed at the start of
+  the file, the start of a function, or start of a block.
+* Using entire namespaces (using directive) can lead to name pollution,
+  increasing the possibilty for name conflicts.  It is considered safer
+  and a better programming practice to include only names that are
+  needed (using declaration) unless multiple names from the same
+  namespace are used.
+* You can create your own namespaces.  It is considered a good programming
+  practice to do so.
+* index of files in this distribution
+    file            purpose
+    --------------  ----------------------------------------------------
+    example         directory containing an example application that
+                    uses namespaces
+    namespace.cpp   example for class demonstration
+    namespace1.cpp  example of using full names and using directive
+    namespace2.cpp  example of functions in a namespace
+    namespace3.cpp  example of function prototypes in a namespace
+    namespace4.cpp  same as 3 except without :: in function definition
+    namespace5.cpp  example of unnamed namespace
+    namespace6.cpp  example of unnamed namespace
+    namespace7.cpp  example of extending a namespace
+    namespace8.cpp  example of nesting namespaces
+    namespace9.cpp  example showing compiler uses global namespace first
+    README          this file
+

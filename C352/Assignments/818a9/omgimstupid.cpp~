@@ -1,0 +1,24 @@
+#include <iostream>
+#include "shortestPath.h"
+using namespace std;
+
+int main()
+{
+   ShortestPath<char>(DIRECTED, WEIGHTED) someGraph;
+   
+   someGraph.insertVertex('a');
+   someGraph.insertVertex('b');
+   someGraph.insertVertex('c');
+   someGraph.insertVertex('d');
+   someGraph.insertVertex('e');
+   someGraph.insertVertex('f');
+   
+   someGraph.insertEdge('a', 'b', 14);
+   someGraph.insertEdge('a', 'c', 12);
+   someGraph.insertEdge('a', 'd', 10);
+   someGraph.insertEdge('b', 'd', 6);
+   someGraph.insertEdge('c', 'e', 8);
+   someGraph.insertEdge('d', 'f', 3);
+   someGraph.insertEdge('e', 'f', 14);
+   someGraph.outputShortestPath('a', 'f');
+}//End main

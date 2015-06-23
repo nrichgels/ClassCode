@@ -1,0 +1,114 @@
+Author: Nathan Richgels
+Program: Prog7
+
+The Person, employee, salaryemployee hourlyemployee and employees classes,
+the functions provided, and the program, Prog7, has been written in the c++ 
+programming language.To construct the program, simply type "make" into the 
+command line.  Type in "prog7" to execute the program.
+
+INTRODUCTION
+~~~~~~~~~~~~
+Person, Employee, HourlyEmployee, and SalaryEmployee are all classes based off
+of the Person class.  Employee is a class with abstract methods (the class
+cannot be used by itself; in this example an Employee HAS to be a
+SalaryEmployee, or an HourlyEmployee.
+
+Employees creates an ADT that stores any given SalaryEmployees or
+HourlyEmployees, and outputs their information in a neat table
+within a file titled "payroll" and a file titled "employees",
+using each of the class's output1() and output2() methods.
+
+In addition, a Person has a Date object within it, meaning a Person cannot
+properly exist without the included Date class.
+
+main.cpp is designed to give an example of these classes by taking a file
+formatted in a specific way(see below), and utilizing the functions within
+functions.cpp.
+
+Prog7 reads up to 100 employees from a given file, and outputs the employee's 
+information into two files(employees and payroll), in a tabular format.  
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+This program relies on 15 files to exist:
+
+File                   function                description
+____________________   _____________________   _______________________________
+main.cpp               main                    main function.
+date.h                 Date defenition         defines the Date class.
+date.cpp               Date implementation     Provides an easy to use and easy
+					       to understand type used to help
+					       keep track of dates.
+person.h	       Person defenition       defines the Person class.
+person.cpp             Person implementation   Holds values for common
+					       attributes of a person.
+employee.h 	       Employee defenition     defines the Employee class.
+employee.cpp	       Employee implementati-  An abstract class that covers
+		       on                      anything about a non-specific
+					       employee.
+hourlyemployee.h       HourlyEmployee defeni-  defines the HourlyEmployee class.
+		       tion
+hourlyemployee.cpp     HourlyEmployee implem-  Is-an employee that gets paid by
+		       entation                the hour.
+salaryemployee.h       SalaryEmployee defeni-  defines the SalaryEmployee class.
+		       tion
+salaryemployee.cpp     SalaryEmployee implem-  Is-an employee that has a
+		       entation                salary.
+employees.h	       Employees defenition    defines the Employees class.
+employees.cpp          Employees implementat-  Stores Employee inherited 
+		       ion		       classes, and provides a header
+					       when using the dump method
+					       to using inherited classes
+				   	       output methods.
+prototypes.h	       function defenitions    defines regular functions.
+functions.cpp	       function implementati-  Provides the functions read,
+		       ion    		       and openFiles. (Used by main)
+
+
+The directory also has three miscellaneous files for user convienience:
+File                            description
+____________________            ______________________________________________
+makefile                        compiles all files into a usable program
+README                          provides program information (this file)
+prog7data			An example input-file showcasing the correct
+				format that an extraenous file should have.
+
+PROGRAM USE
+~~~~~~~~~~~
+Prog7 requires one plain file to be given as input in order to correctly
+function.  As an additional requirement, the file must also be formatted
+correctly.  Any input file can handle both, hour-based employees and salary-
+based employees; however, each employee's information within the file must
+then be formatted differently.
+
+A salary-based employee must have their name, date of birth, social security
+number, work ID number, salary or hourly character (for salary, S), and salary
+pay.  Each node of information must be seperated by a newline.
+
+An hourly-based employee must have their name, date of birth, social security
+number, work ID number, salary or hourly character (for hourly, H), hourly
+wage, and total hours worked.  Each node of information must be seperated by a
+newline.
+
+For example, a file could legally look like:
+Nathan Richgels
+6/8/1993
+369-12-1518
+88888
+S
+215000
+John Doe
+1/2/3
+123-45-6789
+12345
+H
+7.25
+25
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+
+Known bugs:
+
+No bugs are currently known, but if any are found please contact me at 
+richgelsna@mnstate.edu, and I will try to resolve the issue in a timely manner.

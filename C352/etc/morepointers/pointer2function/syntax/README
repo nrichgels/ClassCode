@@ -1,0 +1,23 @@
+This directory contains 5 examples.
+
+ex1.cpp
+   * Uses a typedef to create a name for the pointer to the function.
+     This makes usage of pointers to functions much more readable.
+   * A key point to keep in mind that a pointer to a function must have
+     the signature of the function (the return type and parameters).
+   * This example also shows passing a pointer to a function as a parameter.
+
+ex2.cpp
+   * Similar to ex1.cpp except the pointer to a function has a different
+     signature.
+
+ex3.cpp
+   * Again, just a different function signature.
+
+ex4.cpp
+   * This example does not use a typedef.  The readability of the code
+     is not as clear without the typedef.
+
+ex5.cpp
+   * This gives an example of having a pointer to a templated function.
+     I'm not so sure how useful something like this would be.

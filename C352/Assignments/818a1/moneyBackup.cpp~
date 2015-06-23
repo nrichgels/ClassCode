@@ -1,0 +1,166 @@
+#include <iostream>
+#include "money.h"
+using namespace std;
+
+int Money::fieldSize = 10;
+bool Money::Commas = false;
+bool Money::Truncate = false;
+bool Money::Round = false;
+bool Money::General = true;
+bool Money::Currency = false;
+bool Money::Accounting = false
+
+Money::Money(double amt)
+{
+   setValues(amt);
+}//End Constructor for Money
+
+void Money::setFieldSize(const int& size)
+{
+   fieldSize = size;
+}
+
+void Money::setFormat(const formatType& type)
+{
+   
+}
+
+bool Money::operator==(const Money& amt) const
+{
+  return (getValue()==amt.getValue()); 
+}
+
+bool Money::operator!=(const Money& amt) const
+{
+   return !(*this == amt);
+}
+
+bool Money::operator>(const Money& amt) const
+{
+  return (getValue()>amt.getValue());
+}
+
+bool Money::operator<(const Money& amt) const
+{
+   return (getValue()<amt.getValue());
+}
+
+bool Money::operator>=(const Money& amt) const
+{
+   return !(*this<amt);
+}
+
+bool Money::operator<=(const Money& amt) const
+{
+   return !(*this > amt);
+}
+
+void Money::operator=(const double& amt)
+{
+   setValues(amt);
+}
+
+double Money::operator*(const double& amt) const
+{
+   return (getValue() * amt);
+}
+
+double Money::operator/(const double& amt) const
+{
+   return (getValue() / amt);
+}
+
+double Money::operator+(const double& amt) const
+{
+   return (getValue() + amt);
+}
+
+double Money::operator-(const double& amt) const
+{
+   return (getValue() - amt);
+}
+
+double Money::operator*(const Money& amt) const
+{
+   return (getValue() * amt.getValue());
+}
+
+double Money::operator/(const Money& amt) const
+{
+   return (getValue() / amt.getValue());
+}
+
+double Money::operator+(const Money& amt) const
+{
+   return (getValue() + amt.getValue());
+}
+
+double Money::operator-(const Money& amt) const
+{
+   return (getValue() - amt.getValue());
+}
+
+double Money::getValue() const
+{
+   double r;
+   r = dollarAmt + (centAmt/100.);
+   return r;
+}
+void Money::setValues(double amt)
+{
+   int i;
+   i= 0;
+   if(amt >= 0)
+   {
+      while(i<amt)
+      {
+         i++;
+      }//End while loop
+
+      if(i >amt)
+      {
+         i=i-1;
+      }//end if statement
+      amt = amt - i;
+      centAmt=amt*100;
+      dollarAmt = i;
+   }//end if statement
+   else
+   {
+      while(i>amt)
+      {
+         i= i -1;
+      }//end while loop
+      
+      if(i<amt)
+      {
+         i = i+1;
+      }//End if statement
+      
+      amt = amt - i;
+
+      centAmt = amt *100;
+      dollarAmt = i;
+   }//end else statement
+}//End Money method setValues
+
+long Money::getDollars() const
+{
+   return dollarAmt;
+}
+
+short Money::getCents() const
+{
+   return centAmt;
+}
+
+double Money::Value() const
+{
+   return getValue();
+}
+
+ostream& operator<<(ostream& out, const Money obj)
+{
+   out << obj.getValue();
+   return out;
+}//End ostream overload for class Money

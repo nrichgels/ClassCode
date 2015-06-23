@@ -1,0 +1,11 @@
+Employee Summary Totals
+_______________________
+Total Gross Pay:                  270.00
+Total Federal Witholding:          81.00
+Total Social Security Witheld:     21.60
+Total Net Pay:                    167.40
+
+ID    name                  hours   wage   gross   fed     SS      net     
+___   ____________________  _____   ____   _____   ___     __      ___     
+4907  Nathan Richgels       30.00   5.00   150.00  45.00   12.00   93.00   
+8888  Jim Nasium            20.00   6.00   120.00  36.00   9.60    74.40   

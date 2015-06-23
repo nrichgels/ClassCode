@@ -1,0 +1,21 @@
+This example contains a compiler error.  The compiler error occurs because
+main.cpp includes the following:
+#include "circle.h"
+#include "prototypes.h"
+
+prototypes.h also includes circle.h resulting in redefinition compiler
+errors since the contant PI would be declared twice as would the
+Circle class.
+
+To prevent the compiler error, all .h files should be surrounded by
+#ifndef _PickYourSymbol_
+#define _PickYourSymbol_
+   // put the good stuff here
+#endif
+
+This means that if the symbol is not defined, define it and include
+the code in between.  Or put the other way, if it is defined, ignore the
+code in between because it's already been defined.
+
+The symbol you pick should not be used anywhere else.
+

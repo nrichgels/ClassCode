@@ -1,0 +1,7 @@
+This directory gives a heap ADT.  I got this code from a previous
+data structures textbook.
+
+I added a method to the heap class called dump that will simply
+dump out the array contents of the heap.  This is for demonstration
+purposes only to show the contents of the heap following each
+change to the heap, insertion or deletion.

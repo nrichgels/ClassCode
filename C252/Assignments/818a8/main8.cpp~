@@ -1,0 +1,63 @@
+// File:      main.cpp
+// Author:    Dan Brekke
+
+// This file contains the main function that tests the date class.
+
+#include <iostream>
+#include <string>
+using namespace std;
+#include "date.h"
+
+int main()
+{
+   Date d1(1,1,2000);
+   cout << "1/1/2000                      " << d1 << endl;
+   Date d2(1,1,2000);
+   Date d3(1,2,2000);
+   Date d4(1,1,2009);
+   if (!(d1 < d3 && d1 < d4 && d2 < d3 && d3 < d4 && !(d1 < d2) ))
+      cout << " < operator is NOT correct\n";
+   if (!(d1 <= d3 && d1 <= d4 && d2 <= d3 && d3 <= d4 && d1 <= d2 ))
+      cout << "<= operator is NOT correct\n";
+   if (!(!(d1 > d3 && d1 > d4 && d2 > d3 && d3 > d4 && !(d1 > d2)) ))
+      cout << " > operator is NOT correct\n";
+   if (!(!(d1 >= d3 && d1 >= d4 && d2 >= d3 && d3 >= d4 && d1 >= d2) ))
+      cout << ">= operator is NOT correct\n";
+   if (!(d1 == d2 && !(d1 == d3) && !(d1 == d4) && !(d3 == d4) && !(d2==d3) ))
+      cout << "== operator is NOT correct\n";
+   if (!(!(d1 != d2) && d1 != d3 && d1 != d4 && d3 != d4 && d2!=d3 ))
+      cout << "!= operator is NOT correct\n";
+   cout << d1 << endl;
+   cout << d1.getMonth() << '-' << d1.getDay() << '-' << d1.getYear() << endl;
+   d2.setDate(1,1,2000);
+   cout << d2 << endl;
+   cin >> d3; 
+   cout << d3 << endl;
+   cout << "-------------------\n";
+   d1.setDate(3,31,2000);
+   cout << d1 << endl;
+   d1.setMonth(4);
+   cout << d1 << endl;
+   d1.setDate(3,31,2000);
+   d1.setMonth(14);
+   cout << d1 << endl;
+   d1.setDate(3,31,2000);
+   d1.setDay(32);
+   cout << d1 << endl;
+   cout << "-------------------\n";
+   d1.setDate(2,29,2000);
+   cout << d1 << endl;
+   d1.setYear(1999);
+   cout << d1 << endl;
+   d1.setDate(2,29,2000);
+   d1.setYear(1900);
+   cout << d1 << endl;
+   d1.setDate(2,29,2000);
+   d1.setDay(30);
+   cout << d1 << endl;
+   cout << "-------------------\n";
+   d1.setDate(2,29,2000);
+   d1.setYear(2012);
+   cout << d1 << endl;
+   return 0;
+}

@@ -1,0 +1,50 @@
+Author: Nathan Richgels
+Program: Prog4
+
+The Graph class, and the program, Prog4, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Type in "prog4" to execute the program.
+
+INTRODUCTION
+~~~~~~~~~~~~
+The Graph class is an Abstract Data Type that represents pathed graphs
+(which are studied within Discrete mathematics).  They can be DIRECTED,
+UNDIRECTED, WEIGHTED, or UNWEIGHTED.  No limit of vertices can be added,
+as well as edges.
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+This program relies on 2 files to exist:
+
+File                   function                description
+____________________   _____________________   _______________________________
+main.cpp               main                    main function
+array.h                Array defenition &      array templated class
+                       implementation
+
+The directory also has two miscellaneous files for user convienience:
+File                            description
+____________________            ______________________________________________
+makefile                        compiles all files into usable program
+README                          provides program information (this file)
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+>main.cpp is meant to fully test the class, any bugs have been found and
+eradicated with that file
+
+Known bugs:
+When dumping in UNDIRECTED, there will be double the amount of edges listed
+than what the program sais there is, because when things are directed, it's
+assumed that one edge can go 'both ways'.  This isn't a bug, but it could 
+have the potential to make me lose points.  You should be able to delete
+these double-sided edges by inputting them in any order of paramaters.
+An error will be thrown if you try to insert the same double sided edges
+if it already exists.
+
+Likewise, in a DIRECTED graph, you will be able to insert similar edges
+by reversing the paramaters.  An error will be thrown if you try to delete
+the edges.  The amount of edges being dumped will be matched exactly to how
+many are reported.  Reasoning behind this would be if a different weight
+is needed by going in "opposite directions".  Again, these aren't bugs, but
+these issues should be addressed.

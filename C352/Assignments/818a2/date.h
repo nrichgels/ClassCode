@@ -1,0 +1,58 @@
+
+#ifndef __DATE_H__
+#define __DATE_H__
+using namespace std;
+
+namespace DateNameSpace
+{
+enum formatType {TEXT, FULLTEXT, NUMERIC, FULLNUMERIC };
+enum arithmeticType {DAYS, YEARS, MONTHS}
+             
+
+
+
+class Date
+{
+   public:
+      Date(const int&, const int&, const int&);
+      Date();
+      friend ostream& operator<<(ostream& out, const Date& obj);
+      void setDate( const int&, const int&, const int&);
+      int getMonth() const;
+      int getDay() const;
+      int getYear() const;
+      void setToday();
+
+      static Date Today();
+      static void outputFormat(const formatType& type);
+
+      const Date operator++();
+      void operator=(const string& amt);
+      bool operator==(const Date& date) const;
+      string getDayOfWeek() const;
+   private:
+      int month;
+      int day;
+      int year;
+      static formatType currentFormat;
+      static arithmeticType currentArithmetic;
+      
+      string getMonthString() const;
+
+};//End Class Date
+
+
+
+
+
+class DateException
+{
+   public:
+      DateException(const string& m);
+      string what();
+   private:
+      string msg;
+};//End Class DatetException
+
+}//End DateNameSpace
+#endif

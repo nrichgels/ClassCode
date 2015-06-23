@@ -1,0 +1,26 @@
+#include <sstream>
+#include <string>
+#include <iomanip>
+#include <iostream>
+#include <ctime>
+#include <stdexcept>
+#include <list>
+#include <iterator>
+#include "omgimstupid.h"
+#include "omgimextrastupid.h"
+using namespace std;
+
+void wat( omgImSoStupid helloWorld )
+{
+   cout << helloWorld.n << endl;
+}//End function wat
+
+int main()
+{
+   omgImExtraStupid omgWillThisWork;
+   omgWillThisWork.n = 8;
+   omgWillThisWork.a = 4;
+   
+   wat( omgWillThisWork );
+   return 0;
+}//End main

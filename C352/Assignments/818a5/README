@@ -1,0 +1,41 @@
+Author: Nathan Richgels
+Program: Prog4
+
+The SortedList class, and the program, Prog5, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Type in "prog4" to execute the program.
+
+INTRODUCTION
+~~~~~~~~~~~~
+The SortedList class is an Abstract Data Type that is-a list (from the Standard
+Template Library).  It automatically sorts it's contents as well as gives
+additional (and optional) approaches to traversing the list.
+
+The file main.cpp fully gives an example of the SortedList in use.
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+This program relies on 2 files to exist:
+
+File                   function                description
+____________________   _____________________   _______________________________
+main.cpp               main                    main function
+sortedlist.h         SortedList defenition &   sortedlist templated class
+                       implementation
+
+The directory also has two miscellaneous files for user convienience:
+File                            description
+____________________            ______________________________________________
+makefile                        compiles all files into a usable program
+README                          provides program information (this file)
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+>main.cpp is meant to provide a solid example of how the class works.
+It has been edited several times to test the limits of the class, but has
+been restored to it's original form.
+
+Known bugs:
+
+No bugs are currently known, but if any are found please contact me at 
+richgelsna@mnstate.edu, and I will try to resolve the issue in a timely manner.

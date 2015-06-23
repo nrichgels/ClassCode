@@ -1,0 +1,10 @@
+This directory contains 3 examples, each in their own directory.
+
+example1 - Shows an example of argc and argv syntax and how it works.
+           Try executing it with mulitple command line arguments.
+
+example2 - Shows an example of command line arguments for file names.
+
+example3 - Shows an example of command line arguments for file names.
+           In addition, it shows passing argc and argv as arguments
+           to a function that opens the files.

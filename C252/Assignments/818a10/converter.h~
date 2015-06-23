@@ -1,0 +1,15 @@
+#ifndef __CONVERTER_H__
+#define __CONVERTER_H__
+
+#include <iostream>
+using namespace std;
+class Converter
+{
+   public:
+      static string DecimalToAnyBase(int value, int newBase);
+      static int AnyBaseToDecimal(string value, int currentBase);
+   private:
+      
+}
+
+#endif

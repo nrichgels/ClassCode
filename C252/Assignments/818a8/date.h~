@@ -1,0 +1,57 @@
+// Author: Nathan Richgels
+// File: date.h
+// Date: 3/22/2012
+// Class: CSIS252
+// Assignment 8
+#ifndef __DATE_H__
+#define __DATE_H__
+class Date
+{
+   public:
+      //Methods:
+
+      // Method - constructor
+      // description - Constructs a new Date object
+      // precondition - none
+      // postcondition - Date object is created and has a valid 
+      //                 calendar date.
+      // method input - int month, day, year
+      // method output - none
+      Date(int month=1, int day=1, int year=2000);
+
+      // Method - getMonth
+      // description - Returns month in the date object.
+      // precondition - The date object has been initialized
+      // postcondition - The month integer has been returned
+      // method input - none
+      // method output - month: int
+      int getMonth() const;
+      int getYear() const;
+      int getDay() const;
+      void setMonth(int month);
+      void setYear(int year);
+      void setDay(int day);
+      void setDate(int month, int day, int year);
+
+      //Operator Overloads:
+      bool operator== (const Date& other) const;
+      bool operator>= (const Date& other) const;
+      bool operator<= (const Date& other) const;
+      bool operator>  (const Date& other) const;
+      bool operator<  (const Date& other) const;
+      bool operator!= (const Date& other) const;
+
+   private:
+      int m;
+      int d;
+      int y;
+};
+
+// Functions:
+int centuryLeapYear(int Year);
+bool validDay(int Month, int Day, int Year);
+
+// Stream Operator Overloads:
+ostream& operator<<(ostream& out, const Date&);
+istream& operator>>(istream& in, Date&);
+#endif

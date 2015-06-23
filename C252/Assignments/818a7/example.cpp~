@@ -1,0 +1,13 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+   string one;
+   string two;
+   one="Hello";
+   two="Igloo";
+   cout << (one>two) << endl;
+   return 0;
+}

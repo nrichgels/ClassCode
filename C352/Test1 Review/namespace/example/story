@@ -1,0 +1,29 @@
+File: story
+
+Peter and Stewie are two programmers working on an application.  Each is
+assigned an equal part of the final product and they go their separate
+ways.
+
+Peter must read some data and then output some data.  He decides to
+use the names "read" and "write" for the two functions that he will
+create.
+
+Stewie must also read some data and then output some data.  Without knowing
+the function names that Peter has chosen, he uses "read" and "write" for
+his function names.
+
+When both have completed their part of the application, they both come 
+together to create the main function that will call the functions that 
+they created.  Because they both chose the same function names, one of 
+them will be forced to change his function names to avoid a conflict.  
+While this would not be too big of a deal with only two functions each 
+involved, what if there were hundreds of functions written by dozens 
+of programmers, with functions calling other functions, etc.?  What a 
+mess that would be having to resolve all the name conflicts!
+
+Well, luckily, Lois knew about namespaces and quickly solved their
+problem.  She created a file called peter.h that defined a namespace for
+Peter's functions.  She then created a file called stewie.h that defined
+a namespace for Stewie's functions.  In the main function, it simply became
+a matter of using the appropriate namespace so that the name conflicts
+did not occur.  Peter was so happy he went to the Drunken Clam.

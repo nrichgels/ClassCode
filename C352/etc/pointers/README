@@ -1,0 +1,15 @@
+This directory contains the following examples of pointers
+
+File      Demonstrates
+--------  -------------------------------------------------------
+ex1.cpp   simple pointer usage showing basic syntax
+ex2.cpp   pointer to an array of int, consider an array a const pointer
+ex3.cpp   pointer to an array of char (CString)
+ex4.cpp   dynamic allocation of memory, dangling pointer
+ex5.cpp   dynamic allocation of an array
+ex6.cpp   pointer to a struct and -> operator
+ex7.cpp   dynamic allocation of a struct
+ex8.cpp   pointer to a class object and dynamic allocation of an object
+ex9.cpp   pointer to a dynamically allocated  array of class objects
+ex10.cpp  passing a pointer as an argument to a function
+ex11.cpp  pointer as pass by reference and function returning a pointer

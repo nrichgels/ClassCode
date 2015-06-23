@@ -1,0 +1,93 @@
+Author: Nathan Richgels
+Program: Prog9
+
+The program, Prog9, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Simply type in "prog9" and a complementery file into the 
+command line to run the program correctly. (The "complementery file"
+will be explained later in this file)
+
+
+INTRODUCTION
+~~~~~~~~~~~~
+Prog 9 is a program intended to read a given file with names and
+birthdates entered into it, and output the age of each person in
+organized columns.
+
+I/O
+~~~
+Regarding Input:
+The user should put the names & birthdays of people into a text file
+without any extensions.  When running the program, the text file
+should be typed in after the prog9 (seperated by a whitespace).
+For every person that has an age to be expressed, there should
+be an entry in the text file in this format:
+name
+mm/dd/yyyy
+
+For example:
+
+Johnny Man
+1/2/1960
+Mary Woman
+3/4/1965
+
+For the program to work properly, make sure to include EVERY piece
+of information in the correct format for each person.
+
+*Note: There's a maximum number of 100 people that can be
+interpreted at a time by the program.
+
+Regarding Output:
+The output will be displayed in the Command Line that tells you the
+name and age of each person.  It should be in a format like the
+following:
+
+Name                      Age
+_________________________ ___
+Johnny Man                 52
+Mary Woman                 47
+
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+Prog9 relies on seven files to exist:
+File                           function                  description
+___________________       ___________________          _________________
+arrayListType.h           class arrayListType     Provides defenition for the
+                                                      arrayListType class
+arrayListTypeImp.cpp      class arrayListType     Provides implementation for
+                                                    the arrayListType class
+date.cpp                  class Date              Provides implementation for
+                                                        the Date class
+date.h                    class Date              Provides defenition for the
+                                                         Date class
+itemtype.h                class Person            Provides defenition for the
+                                                         Person class
+person.cpp                class Person            Provides implementation for
+                                                       the Person class
+main.cpp                  main                     Manipulates objects made
+                                                          from classes
+
+This directly also has two files for conveinience:
+File                             description
+___________________________      ________________________________________
+makefile                         compiles all files into a usable program
+README                           provides program information (this file)
+
+Finally, this program relies on one file built by other means to 
+correctly function.
+
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+Pleasen note that this program has been tested assuming that all input 
+has been given with the proper format. For more information on the 
+input's proper format, please read the I/O section.
+
+>Made sure that the age was correct down to the day.
+>Confirmed that the list stacked correctly.
+
+Though no bugs were found, I still have a full can of bugspray.
+So if you find one, contact me at richgelsna@mnstate.edu.
+

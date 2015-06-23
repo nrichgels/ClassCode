@@ -1,0 +1,72 @@
+Author: Nathan Richgels
+Class: Rectangle
+Program: Prog6
+
+The Rectangle Class and the program Prog6 have been written in the c++
+programming language.  To construct the program, simply type in "make"
+into the command line.  Simply type in "prog6" into the command line to run
+the program.
+
+INTRODUCTION
+~~~~~~~~~~~~
+Rectangle is a class intended to replicate the theorems of a rectangle.
+Prog6 is a program solely intended for testing the class, and providing an
+example of how it is used.
+
+I/O
+~~~
+The Rectangle class is completely useable with all boolean operators.
+When a boolean operator is used to compare rectangles, the rectangle's area
+is considered.
+
+The Rectangle class has 7 different methods for a programmer to use.
+
+  Method                         Description                       C/M/A
+  ______                         ___________                       _____
+Rectangle(length, width)     Creates a Rectangle Object         Constructor
+setLength(double)          Sets the length of Rec. Object         Mutator
+setWidth(double)           Sets the width of Rec. Object          Mutator
+Width()                    Returns the width of Rec. Object       Accessor
+Length()                  Returns the length of Rec. Object       Accessor
+Area()                     Returns the area of Rec. Object        Accessor
+Perimeter()               Returns the Perimeter of Rec. Object    Accessor
+
+Since Rectangle is a constructor, you initialize an object with it.
+Ex:
+Rectangle Object(4, 16) <-- Object is a Rectangle with length 4 & width 16.
+
+Everything else is a method you can do with that object.
+Ex:
+Object.setWidth(10) <-- Width is changed from 16 to 10
+Object.Area() <-- Returns the area, which is 4*10 = 40
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+This class relies on 2 files to exist:
+
+File               Description
+_________________  ____________________________
+rectangle.cpp      Implementation of Rectangle class
+rectangle.h        Definition(specification) of Rectangle Class
+
+The directory also has three miscellanious files for user convienience
+
+File               Description
+_________________  ____________________________
+main.cpp           Tests and examplifies the Rectangle class in Prog6
+makefile           Compiles and Links Prog6
+README             Provides class & program informatin (this file)
+
+The Rectangle class can be given a width and length, and it can return
+the width, length, area, and perimeter of that rectangle.
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+Please note that this program has been tested assuming that all input
+has been given with the proper format.  For more information on the
+input's proper format, please read the I/O section.
+
+All operations and methods have been thoroughly tested (via main.cpp).
+
+Though no known bugs were found, I still have a full can of bugspray.
+So if you find a bug, contact me at "richgelsna@mnstate.edu".

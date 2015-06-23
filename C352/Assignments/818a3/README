@@ -1,0 +1,35 @@
+Author: Nathan Richgels
+Program: Prog3
+
+The Array class, and the program, Prog3, has been written in the c++ programming language.
+To construct the program, simply type in "make" into the command
+line.  Type in "prog3" to execute the program.
+
+INTRODUCTION
+~~~~~~~~~~~~
+The Array class is meant to be an advanced array class giving programmers
+who use it the opportunity to use alternate methods of accessing indeces.
+
+PROGRAM DESIGN
+~~~~~~~~~~~~~~
+This program relies on 2 files to exist:
+
+File                   function                description
+____________________   _____________________   _______________________________
+main.cpp               main                    main function
+array.h                Array defenition &      array templated class
+                       implementation
+
+The directory also has two miscellaneous files for user convienience:
+File                            description
+____________________            ______________________________________________
+makefile                        compiles all files into usable program
+README                          provides program information (this file)
+
+PROGRAM TESTING
+~~~~~~~~~~~~~~~
+>main.cpp is meant to fully test the class, any bugs have been found and
+eradicated with that file
+
+Known bugs:
+No known bugs

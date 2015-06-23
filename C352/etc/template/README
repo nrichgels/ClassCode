@@ -1,0 +1,38 @@
+Templates
+---------
+Templates allow you to write C++ code that will work with any data type.
+If a function is templated, it can allow any data type to be passed in
+as a parameter or to be returned by afunction.  If a class is
+templated, it can allow any data type to be used by the class.  This is
+especially important in Abstract Data Types (ADTs).  Essentially, a data
+type becomes a formal parameter to the template code.
+
+Templates offer the following advantages
+1. Use of code without any change to the code or any special set up
+2. More than one data type can be used within the same application
+   without duplication of code
+
+For #1 above, if an ADT had been written to store ints, it would have to be
+changed if we wanted to store floats, or changed if we wanted to store chars,
+etc.  Certainly typedef could be used to make this more convenient but that
+still requires special set up to use it.
+
+For #2 above, if an ADT had been written to store ints, that would be the
+only type that could be used in the application unless the code for the
+ADT was duplicated.  For example, if you wanted both an int ADT and a float
+ADT, you would have to have separate code for each.  However, with templates
+only the templated code is necessary and the data type becomes a parameter.
+
+Additional Notes
+Templated code may require certain relational operators to be defined.  
+Examples include a templated sort function and a templated ordered ADT 
+because these need to compare two values/objects.  Built in data types 
+such as int, float, and char already have the relational operators defined.  
+However, if you are creating your own type to be used in a template 
+(such as a class), you may need to overload the relational operators 
+(this should commonly be done anyway).
+
+Templated code cannot be compiled separately since the data type for the
+template would not be known.  Therefore, templated code must be compiled
+into the code that uses it so that the data type is known.
+

@@ -1,0 +1,37 @@
+This directory shows an example of an abstract class.  The Shape class
+is a base class that contains a pure virtual method (abstract method) 
+Area() which does not contain an implementation.  Therefore, the Shape
+class is an abstract class.  No object can be instantiated from an
+abstract class.  Each derived class that inherits from an abstract class
+must provide implementations for all abstract methods.  In summary,
+
+1) every derived class from Shape must have an implementation of Area()
+2) an object cannot be declared to be of type Shape
+
+The syntax for declaring an abstract method is as follows:
+   virtual Returntype MethodName(Parameterlist) const = 0;
+                                    // or simply = 0 if not a const method
+
+Therefore, the Shape class contains the following:
+   virtual double Area() const = 0; // abstract method
+
+Uses of abstract classes
+* Abstract classes can force all derived classes to implement a 
+  certain method.
+* A pointer to an abstract class can point to any derived class.
+* The abstract class can be used as an argument, thereby allowing any
+  derived class to be passed to it.
+
+Some key concepts of abstract base classes:
+An abstract base class
+1) By definition is a class that contains at least one pure virtual
+   function.
+2) Is used only as the basis for derived classes and thus defines a
+   minimum interface for its descendants.
+3) Has no instances.
+4) Should, in general, omit implementations except for the destructor
+   and functions that provide access to private data members.  That is,
+   virtual functions in an abstract base class usually should be pure.
+5) Must implement any virtual function that is not pure, thereby
+   providing a default implementation if a derived class chooses not
+   to supply its own.
